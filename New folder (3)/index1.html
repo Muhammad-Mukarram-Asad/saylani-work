@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" id="password" placeholder="password">
+    <input type="email" id="email" placeholder="email">
+    <button onclick="get1()">submit</button>
+</body>
+<script>
+    function get1() {
+        var pass = document.getElementById("password")
+        var email = document.getElementById("email")
+        var user_data = JSON.parse(localStorage.getItem("users"))
+        console.log(user_data);
+        var person = user_data.find(element => {
+                if ( (element.email === email.value)  && (element.pass == pass.value) ) {
+                    console.log("100% Valid user.")
+                }
+                return false;
+                });
+
+        console.log(person);
+            }
+
+            
+        // for (let i = 0; i < user_data.length; i++) {
+        //     if (user_data[i].pass ==  pass.value && email.value== user_data[i].email) {
+        //         console.log("ok")
+        //     }
+        //     else
+        //     {
+        //         console.log("Not Ok");
+        //     }
+        // }
+
+        
+     //   var arrayOfObjects = [];
+      //  var obj1 = {id: 1, name: 'John'};
+        // var obj2 = {id: 2, name: 'Adam'};
+        // var obj3 = {id: 3, name: 'babar'};
+        // arrayOfObjects.push(obj1, obj2, obj3)
+
+        // 3
+        // arrayOfObjects
+        // var person = arrayOfObjects.find(element => {
+        // if (element.id === 1) {
+        //     return true;
+        // }
+
+        // return false;
+        // });
+
+        // console.log(person);
+    
+
+
+    </script>
+
+</html>
+
+

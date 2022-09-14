@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>heading</h1>
+    <input type="text" id="name" placeholder="Name">
+    <input type="password" id="password" placeholder="password">
+    <input type="email" id="email" placeholder="email">
+    <button onclick="get()">submit</button>
+</body>
+<script>
+    var arr = []
+    var full_name = document.getElementById("name")
+    var pass = document.getElementById("password")
+    var email = document.getElementById("email")
+    function get() {
+        var user =
+    {
+        "name": full_name.value,
+        "pass": pass.value,
+        "email": email.value,
+    }
+        // var user1 = new user(name.value, pass.value, email.value)
+        arr.push(user)
+        console.log(arr)
+        localStorage.setItem("users", JSON.stringify(arr))
+    }
+    // function user(name,pass,email){
+    //     this.name=name
+    //     this.pass=pass
+    //     this.email=email
+    // }
+
+    
+
+
+</script>
+
+</html>
